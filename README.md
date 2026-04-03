@@ -3,12 +3,12 @@
 Superpowers-UML modifies [Superpowers](https://github.com/obra/superpowers) to ensure a software development workflow in which AI agents design through UML modeling.
 
 Key modifications to Superpowers:
-- The AI agent represents the specifications, including the software design [^1], as a UML model.
-- The user and the AI agent collaboratively refine the specifications and the design [^1] through UML modeling.
+- The AI agent represents the specifications, including the software design *[1]*, as a UML model.
+- The user and the AI agent collaboratively refine the specifications and the design *[1]* through UML modeling.
 - The AI agent creates an implementation plan based on the user-approved UML model.
 - Only Claude Code is supported, as this project relies on Claude Code-specific features such as Hooks and Subagents.
 
-<small>[^1]: In the future, the specification and design artifacts may be separated.</small>
+<small>*[1]*: In the future, the specification and design artifacts may be separated.</small>
 
 ## Demo
 
@@ -18,6 +18,9 @@ Processing time: 90 minutes
 
 ![Demo](demo/demo.gif)
 
+<br>
+
+Created UML diagrams and an AI chat application:
 <table>
   <tr>
     <td><a href="demo/class-diagram.png"><img src="demo/class-diagram.png"></a></td>
