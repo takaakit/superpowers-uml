@@ -1,0 +1,13 @@
+{
+  "name": "superpowers-uml",
+  "description": "Core skills library for Claude Code: TDD, UML, debugging, collaboration patterns, and proven techniques",
+  "version": "0.0.1",
+  "author": {
+    "name": "Takaaki Teshima",
+    "email": "takaaki.teshima.dev@gmail.com"
+  },
+  "homepage": "https://github.com/takaakit/superpowers-uml",
+  "repository": "https://github.com/takaakit/superpowers-uml",
+  "license": "MIT AND CC0-1.0",
+  "keywords": ["skills", "tdd", "uml", "debugging", "collaboration", "best-practices", "workflows"]
+}

@@ -1,0 +1,20 @@
+{
+  "name": "superpowers-uml-dev",
+  "description": "Development marketplace for Superpowers-UML core skills library",
+  "owner": {
+    "name": "Takaaki Teshima",
+    "email": "takaaki.teshima.dev@gmail.com"
+  },
+  "plugins": [
+    {
+      "name": "superpowers-uml",
+      "description": "Core skills library for Claude Code: TDD, UML, debugging, collaboration patterns, and proven techniques",
+      "version": "0.0.1",
+      "source": "./plugins/superpowers-uml",
+      "author": {
+        "name": "Takaaki Teshima",
+        "email": "takaaki.teshima.dev@gmail.com"
+      }
+    }
+  ]
+}
