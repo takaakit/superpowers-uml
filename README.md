@@ -90,11 +90,9 @@ We have not measured the exact figures, but using Superpowers-UML in Claude Code
    /brainstorming
    ```
 
-   > [!TIP]
-   > In Superpowers-UML, no specific design policy is prescribed; the choice of design approach is left to the AI agent. If you want to specify one, a possible approach may be to have the AI agent refer to a document that describes the design policy (e.g., [DDD Reference](https://www.domainlanguage.com/ddd/reference/)) before starting the workflow, and then instruct the agent to design in accordance with that policy.
+   > *Tip 1:* In Superpowers-UML, no specific design policy is prescribed; the choice of design approach is left to the AI agent. If you want to specify one, a possible approach may be to have the AI agent refer to a document that describes the design policy (e.g., [DDD Reference](https://www.domainlanguage.com/ddd/reference/)) before starting the workflow, and then instruct the agent to design in accordance with that policy.
 
-   > [!TIP]
-   > If you want to start in the middle of the workflow, send the prompt "List superpowers-uml commands" to display the available commands, then use the appropriate command.
+   > *Tip 2:* If you want to start in the middle of the workflow, send the prompt "List superpowers-uml commands" to display the available commands, then use the appropriate command.
 
 ## Additional Info
 
