@@ -74,9 +74,11 @@ We have not measured the exact figures, but using Superpowers-UML in Claude Code
 
 ## Usage
 
-1. If possible, we recommend disabling unused MCP tools to avoid reducing the AI agent's tool-calling accuracy.
+1. It is recommended to disable unused MCP tools to avoid reducing the AI agent's tool-calling accuracy.
 
 2. Launch Astah Pro with the Astah Pro MCP plugin installed
+
+   > *Note:* Launch Astah Pro before starting Claude Code, and it should remain open throughout the entire workflow.
 
 3. Open a terminal and go to your project directory
 
