@@ -1,22 +1,19 @@
 # Superpowers-UML: UML-enabled Superpowers
 
-> [!NOTE]  
-> This project is experimental and may be subject to breaking changes without notice.  
-
 Superpowers-UML modifies [Superpowers](https://github.com/obra/superpowers) to ensure a software development workflow in which AI agents design through UML modeling.
 
 Key modifications to Superpowers:
 - The AI agent represents the specifications, including the software design [^1], as a UML model.
 - The user and the AI agent collaboratively refine the specifications and the design [^1] through UML modeling.
 - The AI agent creates an implementation plan based on the user-approved UML model.
-- Only *Claude Code* is supported, as this project relies on Claude Code-specific features such as Hooks and Subagents.
+- Only Claude Code is supported, as this project relies on Claude Code-specific features such as Hooks and Subagents.
 
 <small>[^1]: In the future, the specification and design artifacts may be separated.</small>
 
 ## Demo
 
 Request: *Create a desktop AI chat app in Java*  
-Agent: *Claude Code* with *Sonnet 4.6*  
+Agent: Claude Code with Sonnet 4.6  
 Processing time: 90 minutes  
 
 ![Demo](demo/demo.gif)
@@ -37,18 +34,18 @@ Processing time: 90 minutes
 
 ## Token Consumption
 
-We have not measured the exact figures, but using Superpowers-UML in *Claude Code* with *Sonnet 4.6* for about 40 minutes reaches the Pro plan's 5-hour token limit. If you want to use Superpowers-UML comfortably, the Max plan may be better.
+We have not measured the exact figures, but using Superpowers-UML in Claude Code with Sonnet 4.6 for about 40 minutes reaches the Pro plan's 5-hour token limit. If you want to use Superpowers-UML comfortably, the Max plan may be better.
 
 ## Install
 
-- Install *Claude Code*
+- Install Claude Code
 
-- Install *Astah Pro*
+- Install Astah Pro
 
-- Install the *Astah Pro MCP* plugin in *Astah Pro*
-  > Install steps: Launch *Astah Pro* -> drag and drop the *Astah Pro MCP* JAR file onto the *Astah Pro* window -> restart *Astah Pro*.
+- Install the Astah Pro MCP plugin in Astah Pro
+  > Install steps: Launch Astah Pro -> drag and drop the Astah Pro MCP JAR file onto the Astah Pro window -> restart Astah Pro.
 
-- Install the Superpowers-UML plugin in *Claude Code* via the marketplace
+- Install the Superpowers-UML plugin in Claude Code via the marketplace
     ```bash
     /plugin marketplace add https://github.com/takaakit/superpowers-uml.git
     /plugin install superpowers-uml@superpowers-uml-dev
@@ -57,7 +54,7 @@ We have not measured the exact figures, but using Superpowers-UML in *Claude Cod
 
 ## Uninstall
 
-- Uninstall the Superpowers-UML plugin in *Claude Code*
+- Uninstall the Superpowers-UML plugin in Claude Code
     ```bash
     /plugin uninstall superpowers-uml@superpowers-uml-dev
     /plugin marketplace remove superpowers-uml-dev
@@ -67,7 +64,7 @@ We have not measured the exact figures, but using Superpowers-UML in *Claude Cod
 
 ## Update
 
-- Update the Superpowers-UML plugin in *Claude Code*
+- Update the Superpowers-UML plugin in Claude Code
     ```bash
     /plugin update superpowers-uml@superpowers-uml-dev
     ```
@@ -76,11 +73,11 @@ We have not measured the exact figures, but using Superpowers-UML in *Claude Cod
 
 1. If possible, we recommend disabling unused MCP tools to avoid reducing the AI agent's tool-calling accuracy.
 
-2. Launch *Astah Pro* with the *Astah Pro MCP* plugin installed
+2. Launch Astah Pro with the Astah Pro MCP plugin installed
 
 3. Open a terminal and go to your project directory
 
-4. Launch *Claude Code* with this command to temporarily allow the use of tools:
+4. Launch Claude Code with this command to temporarily allow the use of tools:
    ```bash
    claude --allowedTools "mcp__plugin_superpowers-uml_astah-pro-mcp__*"
    ```
