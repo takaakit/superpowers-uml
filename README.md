@@ -37,7 +37,7 @@ Created UML diagrams and an AI chat application:
 
 ## Token Consumption
 
-We have not measured the exact figures, but using Superpowers-UML in Claude Code with Sonnet 4.6 for about 40 minutes reaches the Pro plan's 5-hour token limit. If you want to use Superpowers-UML comfortably, the Max plan may be better.
+We have not measured the exact figures, but using Superpowers-UML in Claude Code with Sonnet 4.6 for about 40 minutes reaches the Pro plan's 5-hour token limit. If you want to use Superpowers-UML comfortably, the Max plan may be better. For the AI agent model, we recommend Sonnet or Opus in terms of the quality of the generated UML models.
 
 ## Install
 
