@@ -35,9 +35,7 @@ Created UML diagrams and an AI chat application:
 - [Astah Pro](https://astah.net/products/astah-professional/) **v11.0 or later**
 - [Astah Pro MCP](https://github.com/takaakit/astah-pro-mcp) **v0.2.0 or later**
 
-## Token Consumption
-
-We have not measured the exact figures, but using Superpowers-UML in Claude Code with Sonnet 4.6 for about 40 minutes reaches the Pro plan's 5-hour token limit. If you want to use Superpowers-UML comfortably, the Max plan may be better. For the AI agent model, we recommend Sonnet or Opus in terms of the quality of the generated UML models.
+> *Info:* We have not measured the exact figures, but using Superpowers-UML in Claude Code with Sonnet 4.6 for about 40 minutes reaches the Pro plan's 5-hour token limit. If you want to use Superpowers-UML comfortably, the **Max plan** may be better. For the AI agent model, we recommend **Sonnet** or **Opus** in terms of the quality of the generated UML models and the ability to accurately follow the workflow.
 
 ## Install
 
@@ -46,7 +44,7 @@ We have not measured the exact figures, but using Superpowers-UML in Claude Code
 - Install Astah Pro
 
 - Install the Astah Pro MCP plugin in Astah Pro
-  > Install steps: Launch Astah Pro -> drag and drop the Astah Pro MCP JAR file onto the Astah Pro window -> restart Astah Pro.
+  > *Install steps:* Launch Astah Pro -> drag and drop the Astah Pro MCP JAR file onto the Astah Pro window -> restart Astah Pro.
 
 - Install the Superpowers-UML plugin in Claude Code via the marketplace
     ```bash
