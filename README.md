@@ -101,7 +101,7 @@ Created UML diagrams and an AI chat application:
 
 ## License
 
-- The original [Superpowers](https://github.com/obra/superpowers) are copyright © Jesse Vincent and licensed under the **MIT** license.
+- The original [Superpowers](https://github.com/obra/superpowers) is copyright © Jesse Vincent and licensed under the **MIT** license.
 - All modifications and new content added by this project are released under the **CC0 1.0 Universal** (Public Domain) license.
 
 ## Contributing
