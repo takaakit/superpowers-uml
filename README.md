@@ -6,6 +6,7 @@ Key modifications to Superpowers:
 - The AI agent represents the specifications, including the software design *[1]*, as a UML model.
 - The user and the AI agent collaboratively refine the specifications and the design *[1]* through UML modeling.
 - The AI agent creates an implementation plan based on the user-approved UML model.
+- The AI agent revises the UML model so that it matches the implemented code.
 - Only Claude Code is supported, as this project relies on Claude Code-specific features such as Hooks and Subagents.
 
 <small>*[1]*: In the future, the specification and design artifacts may be separated.</small>
