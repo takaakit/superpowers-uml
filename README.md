@@ -50,7 +50,13 @@ Created UML diagrams and an AI chat application:
 - Install the Superpowers-UML plugin in Claude Code via the marketplace
     ```bash
     /plugin marketplace add https://github.com/takaakit/superpowers-uml.git
+    ```
+
+    ```bash
     /plugin install superpowers-uml@superpowers-uml-dev
+    ```
+
+    ```bash
     /reload-plugins
     ```
 
@@ -59,6 +65,9 @@ Created UML diagrams and an AI chat application:
 - Uninstall the Superpowers-UML plugin in Claude Code
     ```bash
     /plugin uninstall superpowers-uml@superpowers-uml-dev
+    ```
+
+    ```bash
     /plugin marketplace remove superpowers-uml-dev
     ```
 
