@@ -94,6 +94,7 @@ Created UML diagrams and an AI chat application:
    ```bash
    claude --allowedTools "mcp__plugin_superpowers-uml_astah-pro-mcp__*"
    ```
+   A confirmation dialog will pop up on initial connection. Check it and click 'Connect'.
 
 5. Start the workflow by running this command in Claude Code
    ```bash
