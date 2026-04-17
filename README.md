@@ -3,13 +3,13 @@
 Superpowers-UML modifies [Superpowers](https://github.com/obra/superpowers) to ensure a software development workflow in which AI agents design through UML modeling.
 
 Key modifications to Superpowers:
-- The AI agent represents the specifications, including the software design *[1]*, as a UML model.
-- The user and the AI agent collaboratively refine the specifications and the design *[1]* through UML modeling.
+- The AI agent represents the specifications, including the software design[^1], as a UML model.
+- The user and the AI agent collaboratively refine the specifications and the design[^1] through UML modeling.
 - The AI agent creates an implementation plan based on the user-approved UML model.
 - The AI agent revises the UML model so that it matches the implemented code.
 - Only Claude Code is supported, as this project relies on Claude Code-specific features such as Hooks and Subagents.
 
-<small>*[1]*: In the future, the specification and design artifacts may be separated.</small>
+[^1]: In the future, the specification and design artifacts may be separated.
 
 ## Demo
 
@@ -45,40 +45,58 @@ Created UML diagrams and an AI chat application:
 - Install Astah Pro
 
 - Install the Astah Pro MCP plugin in Astah Pro
+
   > *Install steps:* Launch Astah Pro -> drag and drop the Astah Pro MCP JAR file onto the Astah Pro window -> restart Astah Pro.
 
+- Set up Claude Code to connect to the Astah Pro MCP server
+
+  Run this command for project scope in your project directory:
+  ```bash
+  claude mcp add --transport http --scope project astah-pro-mcp http://127.0.0.1:8888/mcp
+  ```
+
+  Or run this command for user scope:
+  ```bash
+  claude mcp add --transport http --scope user astah-pro-mcp http://127.0.0.1:8888/mcp
+  ```
+
+  See [here](https://code.claude.com/docs/en/mcp#mcp-installation-scopes) for information on the `--scope` flag.
+
 - Install the Superpowers-UML plugin in Claude Code via the marketplace
-    ```bash
-    /plugin marketplace add https://github.com/takaakit/superpowers-uml.git
-    ```
 
-    ```bash
-    /plugin install superpowers-uml@superpowers-uml-dev
-    ```
+  ```bash
+  /plugin marketplace add https://github.com/takaakit/superpowers-uml.git
+  ```
 
-    ```bash
-    /reload-plugins
-    ```
+  ```bash
+  /plugin install superpowers-uml@superpowers-uml-dev
+  ```
+
+  ```bash
+  /reload-plugins
+  ```
 
 ## Uninstall
 
 - Uninstall the Superpowers-UML plugin in Claude Code
-    ```bash
-    /plugin uninstall superpowers-uml@superpowers-uml-dev
-    ```
 
-    ```bash
-    /plugin marketplace remove superpowers-uml-dev
-    ```
+  ```bash
+  /plugin uninstall superpowers-uml@superpowers-uml-dev
+  ```
+
+  ```bash
+  /plugin marketplace remove superpowers-uml-dev
+  ```
 
 - If you want to remove it completely, manually delete the `~/.claude/plugins/cache/superpowers-uml` directory.
 
 ## Update
 
 - Update the Superpowers-UML plugin in Claude Code
-    ```bash
-    /plugin update superpowers-uml@superpowers-uml-dev
-    ```
+
+  ```bash
+  /plugin update superpowers-uml@superpowers-uml-dev
+  ```
 
 ## Usage
 
@@ -91,12 +109,14 @@ Created UML diagrams and an AI chat application:
 3. Open a terminal and go to your project directory
 
 4. Launch Claude Code with this command to temporarily allow the use of tools:
+
    ```bash
    claude --allowedTools "mcp__plugin_superpowers-uml_astah-pro-mcp__*"
    ```
    A confirmation dialog will pop up on initial connection. Check it and click 'Connect'.
 
 5. Start the workflow by running this command in Claude Code
+
    ```bash
    /brainstorming
    ```
