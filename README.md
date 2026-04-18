@@ -48,20 +48,6 @@ Created UML diagrams and an AI chat application:
 
   > *Install steps:* Launch Astah Pro -> drag and drop the Astah Pro MCP JAR file onto the Astah Pro window -> restart Astah Pro.
 
-- Set up Claude Code to connect to the Astah Pro MCP server
-
-  Run this command for project scope in your project directory:
-  ```bash
-  claude mcp add --transport http --scope project astah-pro-mcp http://127.0.0.1:8888/mcp
-  ```
-
-  Or run this command for user scope:
-  ```bash
-  claude mcp add --transport http --scope user astah-pro-mcp http://127.0.0.1:8888/mcp
-  ```
-
-  See [here](https://code.claude.com/docs/en/mcp#mcp-installation-scopes) for information on the `--scope` flag.
-
 - Install the Superpowers-UML plugin in Claude Code via the marketplace
 
   ```bash
