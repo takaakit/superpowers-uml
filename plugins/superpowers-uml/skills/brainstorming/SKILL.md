@@ -28,7 +28,7 @@ You MUST create a task for each of these items and complete them in order:
 5. **Propose 2-3 approaches** — with trade-offs and your recommendation
 6. **Present design model** — read the UML modeling guide first, then create/update UML model elements and diagrams scaled to their complexity using Astah Pro MCP tools. Get user approval after UML modeling.
 7. **Save design model** — save to `docs/superpowers/specs/YYYY-MM-DD-<topic>-design.asta` and commit
-8. **Spec review loop** — dispatch spec-document-reviewer subagent with precisely crafted review context (never your session history); fix issues and re-dispatch until approved (max 3 iterations, then surface to human)
+8. **Spec self-review** — quick inline check for placeholders, contradictions, ambiguity, scope (see below)
 9. **User reviews design model** — ask user to review the design model in Astah Pro before proceeding
 10. **Transition to implementation** — invoke writing-plans skill to create implementation plan
 
@@ -45,8 +45,7 @@ digraph brainstorming {
     "Present design model" [shape=box];
     "User approves design?" [shape=diamond];
     "Save design model" [shape=box];
-    "Spec review loop" [shape=box];
-    "Spec review passed?" [shape=diamond];
+    "Spec self-review\n(fix inline)" [shape=box];
     "User reviews design model?" [shape=diamond];
     "Invoke writing-plans skill" [shape=doublecircle];
 
@@ -60,10 +59,8 @@ digraph brainstorming {
     "Present design model" -> "User approves design?";
     "User approves design?" -> "Present design model" [label="no, revise"];
     "User approves design?" -> "Save design model" [label="yes"];
-    "Save design model" -> "Spec review loop";
-    "Spec review loop" -> "Spec review passed?";
-    "Spec review passed?" -> "Spec review loop" [label="issues found,\nfix and re-dispatch"];
-    "Spec review passed?" -> "User reviews design model?" [label="approved"];
+    "Save design model" -> "Spec self-review\n(fix inline)";
+    "Spec self-review\n(fix inline)" -> "User reviews design model?";
     "User reviews design model?" -> "Save design model" [label="changes requested"];
     "User reviews design model?" -> "Invoke writing-plans skill" [label="approved"];
 }
@@ -120,12 +117,15 @@ digraph brainstorming {
   - (User preferences for spec location override this default)
 - Commit the Astah Pro project file (.asta) to git
 
-**Spec Review Loop:**
-After describing the design model:
+**Spec Self-Review:**
+After describing the design model, look at it with fresh eyes:
 
-1. Dispatch spec-document-reviewer subagent (see spec-document-reviewer-prompt.md)
-2. If Issues Found: fix, re-dispatch, repeat until Approved
-3. If loop exceeds 3 iterations, surface to human for guidance
+1. **Placeholder scan:** Any "TBD", "TODO", incomplete sections, or vague requirements? Fix them.
+2. **Internal consistency:** Do any sections contradict each other? Does the architecture match the feature descriptions?
+3. **Scope check:** Is this focused enough for a single implementation plan, or does it need decomposition?
+4. **Ambiguity check:** Could any requirement be interpreted two different ways? If so, pick one and make it explicit.
+
+Fix any issues inline. No need to re-review — just fix and move on.
 
 **User Review Gate:**
 After the spec review loop passes, ask the user to review the design model in Astah Pro before proceeding:

@@ -9,7 +9,7 @@
     {
       "name": "superpowers-uml",
       "description": "Core skills library for Claude Code: TDD, UML, debugging, collaboration patterns, and proven techniques",
-      "version": "0.0.1",
+      "version": "0.0.2",
       "source": "./plugins/superpowers-uml",
       "author": {
         "name": "Takaaki Teshima",
