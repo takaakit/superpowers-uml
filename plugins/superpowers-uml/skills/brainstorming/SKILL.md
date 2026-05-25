@@ -88,8 +88,9 @@ digraph brainstorming {
 
 **Presenting the design:**
 
-- Once you believe you understand what you're building, read the UML modeling guide before creating and updating any UML model elements or diagrams:
+- Once you believe you understand what you're building, read the UML modeling guide and UML-code mapping guide before creating and updating any UML model elements or diagrams:
   `skills/brainstorming/uml-modeling-guide.md`
+  `skills/brainstorming/uml-code-mapping-guide.md`
 - Present the design (described in UML)
 - Add notes to the relevant diagram(s) for any non-functional requirements that should be reviewed by the user, and document them there. If it is unclear which diagram is relevant, add the notes to the class diagram and document them there.
 - Ask after each UML diagram whether it looks right so far
