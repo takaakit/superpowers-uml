@@ -38,17 +38,7 @@ Do NOT skip this step because you "already know how to use UML diagrams."
 
 ## Recalling Insights on UML and Modeling
 
-**Before modeling, you MUST** follow these steps to recall insights on UML and modeling:
-1. Retrieve from your internal knowledge any insights presented in the following books.
-   - Martin Fowler. UML distilled: a brief guide to the standard object modeling language. Addison-Wesley Professional, 2018.
-   - Grady Booch, James Rumbaugh, and Ivar Jacobson. Unified modeling language user guide, the 2nd edition. Addison-Wesley Professional, 2005.
-   - James Rumbaugh, Ivar Jacobson, and Grady Booch. The Unified Modeling Language Reference Manual, the 2nd edition. Addison-Wesley Professional, 2004.
-   - Scott W. Ambler. The Elements of UML 2.0 Style. Cambridge University Press, 2005.
-2. Verbalize those insights explicitly for each book and write them to a temporary file (insights-on-uml-and-modeling.md) in the workspace directory.
-3. Load the temporary file into your working context.
-4. Give focused attention to the loaded insights so that they are prioritized in your reasoning.
-
-Note: Retrieve only insights that are actually presented in those books. Do NOT include any critique, commentary, explanation, interpretation, review, or personal impressions about the books.
+**Before modeling, you MUST** use the corresponding tool function to recall insights on UML and modeling.
 
 ## Modeling in Astah Pro
 

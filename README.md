@@ -34,7 +34,7 @@ Created UML diagrams and an AI chat application:
 
 - [Claude Code](https://claude.com/product/claude-code)
 - [Astah Pro](https://astah.net/products/astah-professional/) **v11.0 or later**
-- [Astah Pro MCP](https://github.com/takaakit/astah-pro-mcp) **v0.2.0 or later**
+- [Astah Pro MCP](https://github.com/takaakit/astah-pro-mcp) **v0.2.5 or later**
 
 > *Info:* We recommend using **Sonnet** or **Opus** in terms of the quality of UML modeling and their ability to accurately follow the workflow.
 

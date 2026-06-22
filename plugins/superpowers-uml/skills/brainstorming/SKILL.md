@@ -22,7 +22,7 @@ Every project goes through this process. A todo list, a single-function utility,
 You MUST create a task for each of these items and complete them in order:
 
 1. **Explore project context** — check files, docs, recent commits
-2. **Verify Astah Pro MCP version** — use the tool for retrieving the MCP version to confirm that the MCP server is running **v0.2.0 or later**. If the version is not compatible, ask the user to update the Astah Pro MCP plugin.
+2. **Verify Astah Pro MCP version** — use the tool for retrieving the MCP version to confirm that the MCP server is running **v0.2.5 or later**. If the version is not compatible, ask the user to update the Astah Pro MCP plugin.
 3. **Offer visual companion** (if topic will involve visual questions) — this is its own message, not combined with a clarifying question. See the Visual Companion section below.
 4. **Ask clarifying questions** — one at a time, understand purpose/constraints/success criteria
 5. **Propose 2-3 approaches** — with trade-offs and your recommendation
