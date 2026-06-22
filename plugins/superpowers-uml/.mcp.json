@@ -1,8 +1,15 @@
 {
   "mcpServers": {
     "astah-pro-mcp": {
-      "type": "http",
-      "url": "http://127.0.0.1:8888/mcp"
+      "type": "stdio",
+      "command": "npx",
+      "args": [
+        "-y",
+        "mcp-remote@latest",
+        "http://127.0.0.1:8888/mcp",
+        "--allow-http"
+      ],
+      "env": {}
     }
   }
 }
