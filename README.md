@@ -2,6 +2,8 @@
 
 Superpowers-UML modifies [Superpowers](https://github.com/obra/superpowers) to ensure a software development workflow in which AI agents design through UML modeling.
 
+> *Base version:* Superpowers **v6.2.0**
+
 Key modifications to Superpowers:
 - The AI agent represents the specifications, including the software design[^1], as a UML model.
 - The user and the AI agent collaboratively refine the specifications and the design[^1] through UML modeling.
@@ -33,8 +35,8 @@ Created UML diagrams and an AI chat application:
 ## Requirements
 
 - [Claude Code](https://claude.com/product/claude-code)
-- [Astah Pro](https://astah.net/products/astah-professional/) **v11.0 or later**
-- [Astah Pro MCP](https://github.com/takaakit/astah-pro-mcp) **v0.2.5 or later**
+- [Astah Pro](https://astah.net/products/astah-professional/) **v12.0 or later**
+- [Astah Pro MCP](https://github.com/takaakit/astah-pro-mcp) **v0.2.8 or later**
 
 > *Info:* We recommend using **Sonnet** or **Opus** in terms of the quality of UML modeling and their ability to accurately follow the workflow.
 

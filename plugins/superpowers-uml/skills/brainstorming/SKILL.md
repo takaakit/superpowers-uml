@@ -22,8 +22,8 @@ Every project goes through this process. A todo list, a single-function utility,
 You MUST create a task for each of these items and complete them in order:
 
 1. **Explore project context** — check files, docs, recent commits
-2. **Verify Astah Pro MCP version** — use the tool for retrieving the MCP version to confirm that the MCP server is running **v0.2.5 or later**. If the version is not compatible, ask the user to update the Astah Pro MCP plugin.
-3. **Offer visual companion** (if topic will involve visual questions) — this is its own message, not combined with a clarifying question. See the Visual Companion section below.
+2. **Verify Astah Pro MCP version** — use the tool for retrieving the MCP version to confirm that the MCP server is running **v0.2.8 or later**. If the version is not compatible, ask the user to update the Astah Pro MCP plugin.
+3. **Offer the visual companion just-in-time** — NOT upfront. The first time a question would genuinely be clearer shown than described, offer it then (its own message); on approval its browser tab opens for you. If no visual question ever arises, never offer it. See the Visual Companion section below.
 4. **Ask clarifying questions** — one at a time, understand purpose/constraints/success criteria
 5. **Propose 2-3 approaches** — with trade-offs and your recommendation
 6. **Present design model** — read the UML modeling guide first, then create/update UML model elements and diagrams scaled to their complexity using Astah Pro MCP tools. Get user approval after UML modeling.
@@ -38,8 +38,6 @@ You MUST create a task for each of these items and complete them in order:
 digraph brainstorming {
     "Explore project context" [shape=box];
     "Verify Astah Pro MCP version" [shape=box];
-    "Visual questions ahead?" [shape=diamond];
-    "Offer Visual Companion\n(own message, no other content)" [shape=box];
     "Ask clarifying questions" [shape=box];
     "Propose 2-3 approaches" [shape=box];
     "Present design model" [shape=box];
@@ -50,10 +48,7 @@ digraph brainstorming {
     "Invoke writing-plans skill" [shape=doublecircle];
 
     "Explore project context" -> "Verify Astah Pro MCP version";
-    "Verify Astah Pro MCP version" -> "Visual questions ahead?";
-    "Visual questions ahead?" -> "Offer Visual Companion\n(own message, no other content)" [label="yes"];
-    "Visual questions ahead?" -> "Ask clarifying questions" [label="no"];
-    "Offer Visual Companion\n(own message, no other content)" -> "Ask clarifying questions";
+    "Verify Astah Pro MCP version" -> "Ask clarifying questions";
     "Ask clarifying questions" -> "Propose 2-3 approaches";
     "Propose 2-3 approaches" -> "Present design model";
     "Present design model" -> "User approves design?";
@@ -85,6 +80,7 @@ digraph brainstorming {
 - Propose 2-3 different approaches with trade-offs
 - Present options conversationally with your recommendation and reasoning
 - Lead with your recommended option and explain why
+- YAGNI ruthlessly - remove unnecessary features from every approach and design
 
 **Presenting the design:**
 
@@ -140,23 +136,14 @@ Wait for the user's response. If they request changes, make them and re-run the 
 - Invoke the writing-plans skill to create a detailed implementation plan
 - Do NOT invoke any other skill. writing-plans is the next step.
 
-## Key Principles
-
-- **One question at a time** - Don't overwhelm with multiple questions
-- **Multiple choice preferred** - Easier to answer than open-ended when possible
-- **YAGNI ruthlessly** - Remove unnecessary features from all designs
-- **Explore alternatives** - Always propose 2-3 approaches before settling
-- **Incremental validation** - Present design model, get approval before moving on
-- **Be flexible** - Go back and clarify when something doesn't make sense
-
 ## Visual Companion
 
-A browser-based companion for showing mockups, and visual options during brainstorming. Available as a tool — not a mode. Accepting the companion means it's available for questions that benefit from visual treatment; it does NOT mean every question goes through the browser.
+A browser-based companion for showing mockups and visual options during brainstorming. Available as a tool — not a mode. Accepting the companion means it's available for questions that benefit from visual treatment; it does NOT mean every question goes through the browser.
 
-**Offering the companion:** When you anticipate that upcoming questions will involve visual content (mockups, layouts), offer it once for consent:
-> "Some of what we're working on might be easier to explain if I can show it to you in a web browser. I can put together mockups, comparisons, and other visuals as we go. This feature is still new and can be token-intensive. Want to try it? (Requires opening a local URL)"
+**Offering the companion (just-in-time):** Do NOT offer it upfront. Wait until a question would genuinely be clearer shown than told — a real mockup / layout question, not merely a UI *topic*. The first time that happens, offer it then, as its own message:
+> "This next part might be easier if I show you — I can put together mockups and comparisons in a browser tab as we go. It's still new and can be token-intensive. Want me to? I'll open it for you."
 
-**This offer MUST be its own message.** Do not combine it with clarifying questions, context summaries, or any other content. The message should contain ONLY the offer above and nothing else. Wait for the user's response before continuing. If they decline, proceed with text-only brainstorming.
+**This offer MUST be its own message.** Only the offer — no clarifying question, summary, or other content. Wait for the user's response. If they accept, start the server with `--open` so their browser opens to the first screen automatically. If they decline, continue text-only and don't offer again unless they raise it.
 
 **Per-question decision:** Even after the user accepts, decide FOR EACH QUESTION whether to use the browser or the terminal. The test: **would the user understand this better by seeing it than reading it?**
 

@@ -1,0 +1,26 @@
+# Ensure shell scripts always have LF line endings
+*.sh text eol=lf
+plugins/superpowers-uml/hooks/session-start text eol=lf
+
+# The subagent-driven-development helper scripts are extensionless bash.
+# Upstream's .gitattributes does not cover them, so on Windows they are
+# checked out with CRLF; pin them here.
+plugins/superpowers-uml/skills/subagent-driven-development/scripts/* text eol=lf
+
+# Ensure the polyglot wrapper keeps LF (it's parsed by both cmd and bash)
+*.cmd text eol=lf
+
+# Common text files
+*.md text eol=lf
+*.json text eol=lf
+*.js text eol=lf
+*.cjs text eol=lf
+*.mjs text eol=lf
+*.ts text eol=lf
+*.html text eol=lf
+
+# Explicitly mark binary files
+*.png binary
+*.jpg binary
+*.gif binary
+*.asta binary

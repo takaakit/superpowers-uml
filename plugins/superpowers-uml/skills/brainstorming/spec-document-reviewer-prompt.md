@@ -7,8 +7,10 @@ Use this template when dispatching a spec document reviewer subagent.
 **Dispatch after:** Spec document is described in UML model and diagrams.
 
 ```
-Task tool (general-purpose):
+Subagent (general-purpose):
   description: "Review spec document (described in UML)"
+  model: [MODEL — REQUIRED: an omitted model silently inherits the session's
+         most expensive one]
   prompt: |
     You are a spec document (described in UML) reviewer. Verify this spec is complete and ready for planning.
 
