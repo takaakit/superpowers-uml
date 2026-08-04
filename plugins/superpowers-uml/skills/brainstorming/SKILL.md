@@ -22,7 +22,7 @@ Every project goes through this process. A todo list, a single-function utility,
 You MUST create a task for each of these items and complete them in order:
 
 1. **Explore project context** — check files, docs, recent commits
-2. **Verify Astah Pro MCP version** — use the tool for retrieving the MCP version to confirm that the MCP server is running **v0.2.8 or later**. If the version is not compatible, ask the user to update the Astah Pro MCP plugin.
+2. **Verify Astah Pro MCP version** — use the tool for retrieving the MCP version to confirm that the MCP server is running **v0.2.8 or later**. If the version is not compatible, ask the user to update the Astah Pro MCP plugin. If this call — or any later MCP call — hangs without responding while Astah Pro itself is fine, the connection has stalled: ask your human partner to run `/mcp` and reconnect to `plugin:superpowers-uml:astah-pro-mcp`, then retry.
 3. **Offer the visual companion just-in-time** — NOT upfront. The first time a question would genuinely be clearer shown than described, offer it then (its own message); on approval its browser tab opens for you. If no visual question ever arises, never offer it. See the Visual Companion section below.
 4. **Ask clarifying questions** — one at a time, understand purpose/constraints/success criteria
 5. **Propose 2-3 approaches** — with trade-offs and your recommendation

@@ -119,6 +119,9 @@ running with the MCP server responding, and note the plan's Global Constraints
 `**Design model:**` line — the `.asta` path and the model elements and diagrams
 that bind the whole plan. If the plan has no such line, the plan predates this
 workflow: ask your human partner for the design model's path before proceeding.
+If an MCP call hangs while Astah Pro itself is responsive, the connection has
+stalled: ask your human partner to run `/mcp` and reconnect to
+`plugin:superpowers-uml:astah-pro-mcp`, then retry.
 
 Conversation memory does not survive compaction. In real sessions,
 controllers that lost their place have re-dispatched entire completed task
