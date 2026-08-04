@@ -2,8 +2,6 @@
 
 Superpowers-UML modifies [Superpowers](https://github.com/obra/superpowers) to ensure a software development workflow in which AI agents design through UML modeling.
 
-> *Base version:* Superpowers **v6.2.0**
-
 Key modifications to Superpowers:
 - The AI agent represents the specifications, including the software design[^1], as a UML model.
 - The user and the AI agent collaboratively refine the specifications and the design[^1] through UML modeling.
