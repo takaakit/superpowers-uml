@@ -36,9 +36,13 @@ Understand the different types of UML diagrams and how they are used.
 Do NOT skip this step because you "already know how to use UML diagrams."
 </HARD-GATE>
 
-## Recalling Insights on UML and Modeling
+## Recalling Insights on UML, Modeling, and Architecture
 
-**Before modeling, you MUST** use the corresponding tool function to recall insights on UML and modeling.
+**Before modeling, you MUST** use the corresponding tool function to recall insights on UML, modeling, and architecture.
+
+## Recalling Architectural and Design Smells
+
+**Before modeling, you MUST** use the corresponding tool function to recall architectural smells and design smells that should be avoided.
 
 ## Modeling in Astah Pro
 
