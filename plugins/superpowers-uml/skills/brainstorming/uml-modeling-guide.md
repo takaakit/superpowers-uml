@@ -54,6 +54,10 @@ Use the Astah Pro MCP tools to create, update, and review model elements and dia
 
 **Adjust diagram layout after changes:** After creating or updating a diagram, adjust the diagram layout so that it conforms to the diagram layout guide.
 
+## Maintaining Consistency Within and Across Model Elements and Diagrams
+
+**After modeling, you MUST** use the corresponding tool functions to maintain terminological consistency and semantic consistency, both within and across model elements and diagrams.
+
 ## Diagram Image Export
 
 Use the MCP tools to export diagrams as images. This is essential for:
