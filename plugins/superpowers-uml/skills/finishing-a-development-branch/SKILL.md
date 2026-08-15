@@ -35,7 +35,28 @@ Tests failing (<N> failures). Must fix before completing:
 
 ## Step 2: Verify UML Model Alignment
 
-**Use Astah Pro MCP tools to verify that the implementation is consistent with the model and diagrams:**
+**First, confirm Astah has this branch's model open.** Call `get_proj_path` and
+compare it against this working tree:
+
+```bash
+git rev-parse --show-toplevel
+```
+
+| `get_proj_path` returns | Action |
+|---|---|
+| A path under this working tree | Proceed with verification |
+| A path elsewhere — another checkout, another worktree, another project | **STOP** |
+| Empty string (never saved) | **STOP** |
+
+**If it does not match, stop and report both paths to your human partner.** The
+model you are about to verify is not the model this branch carries: Astah keeps
+one project open for the whole machine and writes back to the path it opened,
+regardless of anyone's working directory. Verifying against the wrong `.asta` is
+worse than not verifying — it produces a green Iron Law check for a pair that
+was never actually compared, and the merge proceeds on a stale model. Let your
+human partner decide which copy is authoritative before you verify anything.
+
+**Then use Astah Pro MCP tools to verify that the implementation is consistent with the model and diagrams:**
 
 - Compare the model and diagrams with the actual source files.
 - Check that model elements (classes, interfaces, enumerations, attributes, operations, relationships, and dependencies) are consistent with the structural definitions in the code.
@@ -226,6 +247,7 @@ place. If your platform provides a workspace-exit tool, use it.
 | Excuse | Reality |
 |--------|---------|
 | "The model is close enough to the code" | The Iron Law is exact alignment. Bring one into line with the other — "close enough" is how a model rots into fiction. |
+| "Astah is open, so it must be this branch's model" | Run `get_proj_path`. Astah holds one project for the whole machine and your human partner can switch it at any time; the path it returns is the only evidence of which model you are checking. |
 | "I'll sync the UML model after the merge" | Nobody comes back. A model that ships out of sync stays out of sync. |
 | "Tests passed earlier this session" | Run the suite on the tree you are about to integrate. A green run only proves the tree it ran on. |
 | "They obviously want it merged" | Integration is your human partner's decision. Present the menu and wait. |

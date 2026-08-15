@@ -131,7 +131,7 @@ Return: Summary of what you found and what you fixed.
 **Related failures:** Fixing one might fix others - investigate together first
 **Need full context:** Understanding requires seeing entire system
 **Exploratory debugging:** You don't know what's broken yet
-**Shared state:** Agents would interfere (editing same files, using same resources)
+**Shared state:** Agents would interfere (editing same files, using same resources). An Astah design model counts as shared state even when the agents touch different code: Astah keeps one project open for the whole machine, shared by every agent. Never dispatch parallel agents that may edit the model.
 
 ## Real Example from Session
 

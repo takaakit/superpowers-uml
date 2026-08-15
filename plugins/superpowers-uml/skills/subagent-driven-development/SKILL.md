@@ -109,8 +109,9 @@ digraph process {
 
 ## Setup
 
-Ensure the work happens in an isolated workspace: use
-superpowers-uml:using-git-worktrees to create one or verify the existing one.
+Ensure the work is isolated from main/master before Task 1: use
+superpowers-uml:using-git-worktrees — it verifies existing isolation, and
+otherwise chooses between a worktree and an in-place feature branch.
 Never start implementation on a main/master branch without your human
 partner's explicit consent.
 

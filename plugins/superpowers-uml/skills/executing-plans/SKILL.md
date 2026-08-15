@@ -13,10 +13,12 @@ Load plan, review critically, execute all tasks, report when complete.
 
 **Note:** Superpowers-UML works much better with access to subagents, which Claude Code provides. Use superpowers-uml:subagent-driven-development instead of this skill unless your human partner specifically asked for inline execution.
 
+**Astah design model:** This skill runs in a separate session. Do not run it alongside another session working on the same Astah project — Astah keeps one project open, shared by every session and agent, so two concurrent executions edit the same model with nothing coordinating them.
+
 ## The Process
 
 ### Step 1: Load and Review Plan
-1. Ensure an isolated workspace: use superpowers-uml:using-git-worktrees to create one or verify the existing one
+1. Ensure the work is isolated from main/master: use superpowers-uml:using-git-worktrees — it verifies existing isolation, and otherwise chooses between a worktree and an in-place feature branch
 2. Read plan file
 3. Review critically - identify any questions or concerns about the plan
 4. If concerns: Raise them with your human partner before starting

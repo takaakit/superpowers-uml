@@ -15,6 +15,53 @@ Ensure work happens in an isolated workspace. Prefer your platform's native work
 
 ## Step 0: Detect Existing Isolation
 
+### Astah design model gate — check this before anything else
+
+```bash
+git ls-files 'docs/superpowers/specs/*.asta'   # the workflow's design model
+```
+
+The gate is about a model **this work edits**, not any `.asta` that happens to
+be tracked. It opens if any of these hold:
+
+- the command above returns a file, or
+- the plan you are about to execute names a `.asta` inside this repository in
+  its Global Constraints `**Design model:**` line, or
+- `get_proj_path` returns a path inside this repository.
+
+A tracked `.asta` nobody edits — a demo fixture, a test resource — does not
+open the gate.
+
+**When the gate opens, do NOT create a worktree.** Astah keeps exactly one
+project open, shared by every agent and subagent, and it stays pointed at the
+copy it opened — `save_proj` writes to that copy no matter which working
+directory the caller is in. A worktree puts a second `.asta` on disk that Astah
+never opens, so model edits land outside your branch while `git status` in the
+worktree reports nothing to commit. The Iron Law check at finish time then
+compares this branch's code against a model file the branch does not carry.
+
+Work in place on a feature branch instead. Branch isolation survives; only
+directory isolation is given up, and directory isolation was already a fiction
+for a model living in a single shared Astah instance.
+
+```bash
+git branch --show-current            # if main/master, create a feature branch
+git switch -c <branch-name>
+```
+
+Then skip to Step 2 (Project Setup). Tell your human partner:
+
+> "This repo tracks an Astah design model, so I'm working on branch `<name>` in
+> place rather than in a worktree — Astah shares one open project across all
+> agents, and a worktree would split the model into two copies."
+
+**If the gate is open but you are already in a worktree** (harness-created — the
+detection below will confirm it): you cannot undo that here. Say so, and have
+your human partner confirm which copy Astah has open (`get_proj_path`) before
+any model editing begins.
+
+### Detect the workspace
+
 **Before creating anything, check if you are already in an isolated workspace.**
 
 ```bash
@@ -143,6 +190,7 @@ Ready to implement <feature-name>
 
 | Situation | Action |
 |-----------|--------|
+| Repo tracks a `.asta` design model | No worktree — feature branch in place (Step 0) |
 | Already in linked worktree | Skip creation (Step 0) |
 | In a submodule | Treat as normal repo (Step 0 guard) |
 | Native worktree tool available | Use it (Step 1a) |
@@ -161,6 +209,8 @@ Ready to implement <feature-name>
 | Excuse | Reality |
 |--------|---------|
 | "I'm obviously not in a worktree — no need to check" | Run Step 0. Harness-created isolation and submodules both fool eyeballing; the detection commands settle it. |
+| "A worktree gives the Astah model isolation too" | It gives it a second copy. Astah opens one project for the whole machine and writes back to the path it opened — the worktree's `.asta` is a file nobody is editing. |
+| "I'll just copy the `.asta` into the worktree afterwards" | Duplicating an existing Astah project file into a working directory is forbidden outright (`astah_pro_mcp_guide`). Don't create the second copy in the first place. |
 | "`git worktree add` is quicker than hunting for a native tool" | A native tool (e.g. `EnterWorktree`) owns placement, branching, and cleanup. Bypassing it is the #1 mistake — it creates phantom state your harness can't see or manage. |
 | "The worktree directory is surely ignored already" | Run `git check-ignore`. An unignored worktree directory commits the whole tree into the repo. |
 | "Any directory name works" | Explicit instructions beat an existing project-local directory, which beats the `.worktrees/` default. |
