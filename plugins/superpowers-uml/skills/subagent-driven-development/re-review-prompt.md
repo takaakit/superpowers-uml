@@ -56,6 +56,12 @@ Subagent (general-purpose):
     in Astah Pro and confirm they match the fix diff. Query nothing else —
     model elements the fix did not touch are outside your scope.
 
+    **Astah Pro MCP tools:** Before querying the design model, load the MCP
+    server guide with the corresponding tool function. The MCP server
+    exposes only some of its tools directly; many other tools are available
+    only through an MCP tool script. Before running an MCP tool script or an
+    Astah API script, load the guide for that type of script.
+
     ## Tests
 
     The implementer re-ran the tests covering the amended code and appended

@@ -34,7 +34,7 @@ Created UML diagrams and an AI chat application:
 
 - [Claude Code](https://claude.com/product/claude-code)
 - [Astah Pro](https://astah.net/products/astah-professional/) **v12.0 or later**
-- [Astah Pro MCP](https://github.com/takaakit/astah-pro-mcp) **v0.2.8 or later**
+- [Astah Pro MCP](https://github.com/takaakit/astah-pro-mcp) **v0.3.0 or later**
 
 > *Info:* We recommend using **Sonnet** or **Opus** in terms of the quality of UML modeling and their ability to accurately follow the workflow.
 
@@ -86,22 +86,20 @@ Created UML diagrams and an AI chat application:
 
 ## Usage
 
-1. It is recommended to disable unused MCP tools to avoid reducing the AI agent's tool-calling accuracy.
-
-2. Launch Astah Pro with the Astah Pro MCP plugin installed
+1. Launch Astah Pro with the Astah Pro MCP plugin installed
 
    > *Note:* Launch Astah Pro before starting Claude Code, and it should remain open throughout the entire workflow.
 
-3. Open a terminal and go to your project directory
+2. Open a terminal and go to your project directory
 
-4. Launch Claude Code with this command to temporarily allow the use of tools:
+3. Launch Claude Code with this command to temporarily allow the use of tools:
 
    ```bash
    claude --allowedTools "mcp__plugin_superpowers-uml_astah-pro-mcp__*"
    ```
    A confirmation dialog will pop up on initial connection. Check it and click 'Connect'.
 
-5. Start the workflow by running this command in Claude Code
+4. Start the workflow by running this command in Claude Code
 
    ```bash
    /brainstorming

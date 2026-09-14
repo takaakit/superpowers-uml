@@ -44,6 +44,12 @@ Subagent (general-purpose):
     **While you work:** If you encounter something unexpected or unclear, **ask questions**.
     It's always OK to pause and clarify. Don't guess or make assumptions.
 
+    **Astah Pro MCP tools:** Before querying or updating the design model,
+    load the MCP server guide with the corresponding tool function. The MCP
+    server exposes only some of its tools directly; many other tools are
+    available only through an MCP tool script. Before running an MCP tool
+    script or an Astah API script, load the guide for that type of script.
+
     **Design model query and update:** The design model in Astah Pro is the
     spec for this task. Query the model elements and diagrams named in your
     brief's **Realizes:** line via the MCP tools before you write code.

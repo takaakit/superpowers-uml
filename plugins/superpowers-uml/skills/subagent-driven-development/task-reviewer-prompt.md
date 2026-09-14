@@ -26,6 +26,12 @@ Subagent (general-purpose):
     Global constraints from the spec/design that bind this task:
     [GLOBAL_CONSTRAINTS]
 
+    **Astah Pro MCP tools:** Before querying the design model, load the MCP
+    server guide with the corresponding tool function. The MCP server
+    exposes only some of its tools directly; many other tools are available
+    only through an MCP tool script. Before running an MCP tool script or an
+    Astah API script, load the guide for that type of script.
+
     The design model in Astah Pro is the specification. Query it with the MCP
     tools for the model elements and diagrams named in the global constraints —
     those, and nothing else. Do not browse the rest of the model: an unnamed

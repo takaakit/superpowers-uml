@@ -48,9 +48,9 @@ Do NOT skip this step because you "already know how to use UML diagrams."
 
 Use the Astah Pro MCP tools to create, update, and review model elements and diagrams.
 
-**How to find the right tools:** The MCP server exposes tools with names and descriptions. Read the tool descriptions to identify which tools handle the operation you need.
+**How to find the right tools:** The MCP server exposes only some of its tools directly; many other tools are available only through an MCP tool script. Read the descriptions of the directly exposed tools, and use the corresponding tool functions to list the tools callable from an MCP tool script and to get their details. Identify which tools handle the operation you need, then call the directly exposed tools as MCP tools and the other tools from an MCP tool script.
 
-**Load guides using tools:** First of all, make sure to load the MCP server guide. Also, make sure to load the guide for each diagram that you create, update, or review.
+**Load guides using tools:** First of all, make sure to load the MCP server guide. Before running an MCP tool script or an Astah API script, make sure to load the guide for that type of script. Also, make sure to load the guide for each diagram that you create, update, or review.
 
 **Adjust diagram layout after changes:** After creating or updating a diagram, adjust the diagram layout so that it conforms to the diagram layout guide.
 
