@@ -57,7 +57,9 @@ Subagent (general-purpose):
     during implementation, update the design model each time. It is VERY
     IMPORTANT that the design model and the code remain consistent. You DO
     NOT need the user's permission to update the design model within this
-    task. Record every model change in your report.
+    task. Record every model change in your report. Before every commit, if
+    the Astah project has unsaved changes, save it and commit the `.asta`
+    with the code.
 
     While iterating, run the focused test for what you're changing; run the
     full suite once before committing, not after every edit.
